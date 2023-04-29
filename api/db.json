@@ -1,0 +1,28 @@
+{
+  "autok": [
+    {
+      "id": 1,
+      "marka": "Mercedes",
+      "rendszam": "RGK-147",
+      "tipus": "Benzin"
+    },
+    {
+      "id": 2,
+      "marka": "Skoda",
+      "rendszam": "ADD-258",
+      "tipus": "Benzin"
+    },
+    {
+      "id": 3,
+      "marka": "Fiat",
+      "rendszam": "FGA-799",
+      "tipus": "Dízel"
+    },
+    {
+      "id": "4",
+      "marka": "Trabant",
+      "rendszam": "ASD-123",
+      "tipus": "Benzin"
+    }
+  ]
+}
