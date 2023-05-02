@@ -20,6 +20,15 @@ Verify Create
     Capture Page Screenshot    addedCar.png
     ${sor}    Get Element Count    css:div.row
     Log To Console    Sorok száma add után: ${sor}
+Verify Update
+    Sleep    3s
+    ${sor}    Get Element Count    css:div.row
+    Input Text    xpath:/html/body/app-root/div/app-autok-lista/div[${sor}]/div[2]/input    Citroen
+    Input Text    xpath:/html/body/app-root/div/app-autok-lista/div[${sor}]/div[3]/input    AA-7741
+    Sleep    3s
+    Click Element    xpath:/html/body/app-root/div/app-autok-lista/div[${sor}]/div[5]/button[2]
+    Capture Page Screenshot    modifiedCar.png
+    Sleep    5s
 Verify Delete
     ${sor}    Get Element Count    css:div.row
     Click Element    xpath:/html/body/app-root/div/app-autok-lista/div[${sor}]/div[5]/button[1]
