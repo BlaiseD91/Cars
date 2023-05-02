@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.7 on win32)" generated="20230502 19:18:31.037" rpa="true" schemaversion="3">
+<suite id="s1" name="Teszt" source="E:\SzekelyBalazsSZOFT_I1E\teszteles\cars\teszt">
+<suite id="s1-s1" name="CRUD" source="E:\SzekelyBalazsSZOFT_I1E\teszteles\cars\teszt\CRUD.robot">
+<test id="s1-s1-t1" name="Open Site" line="6">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>Chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230502 19:18:31.413" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:4200/'.</msg>
+<msg timestamp="20230502 19:18:31.436" level="INFO">Executing: C:\Python310\lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json</msg>
+<status status="PASS" starttime="20230502 19:18:31.411" endtime="20230502 19:18:33.282"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230502 19:18:35.296" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230502 19:18:33.285" endtime="20230502 19:18:35.298"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Navbar</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230502 19:18:35.332" level="INFO">Current page contains text 'Navbar'.</msg>
+<status status="PASS" starttime="20230502 19:18:35.300" endtime="20230502 19:18:35.332"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/app-root/div/app-autok-lista/div[2]/div[5]/button</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20230502 19:18:35.347" level="INFO">Current page contains element 'xpath:/html/body/app-root/div/app-autok-lista/div[2]/div[5]/button'.</msg>
+<status status="PASS" starttime="20230502 19:18:35.333" endtime="20230502 19:18:35.347"/>
+</kw>
+<status status="PASS" starttime="20230502 19:18:31.409" endtime="20230502 19:18:35.349"/>
+</test>
+<test id="s1-s1-t2" name="Verify Create" line="11">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath:/html/body/app-root/div/app-autok-lista/div[2]/div[1]/input</arg>
+<arg>11</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230502 19:18:35.354" level="INFO">Typing text '11' into text field 'xpath:/html/body/app-root/div/app-autok-lista/div[2]/div[1]/input'.</msg>
+<status status="PASS" starttime="20230502 19:18:35.354" endtime="20230502 19:18:35.464"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath:/html/body/app-root/div/app-autok-lista/div[2]/div[2]/input</arg>
+<arg>Mazda</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230502 19:18:35.465" level="INFO">Typing text 'Mazda' into text field 'xpath:/html/body/app-root/div/app-autok-lista/div[2]/div[2]/input'.</msg>
+<status status="PASS" starttime="20230502 19:18:35.464" endtime="20230502 19:18:35.573"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath:/html/body/app-root/div/app-autok-lista/div[2]/div[3]/input</arg>
+<arg>HGE-741</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230502 19:18:35.575" level="INFO">Typing text 'HGE-741' into text field 'xpath:/html/body/app-root/div/app-autok-lista/div[2]/div[3]/input'.</msg>
+<status status="PASS" starttime="20230502 19:18:35.574" endtime="20230502 19:18:35.689"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath:/html/body/app-root/div/app-autok-lista/div[2]/div[4]/input</arg>
+<arg>Dízel</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230502 19:18:35.690" level="INFO">Typing text 'Dízel' into text field 'xpath:/html/body/app-root/div/app-autok-lista/div[2]/div[4]/input'.</msg>
+<status status="PASS" starttime="20230502 19:18:35.690" endtime="20230502 19:18:35.790"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>beforeAddingCar.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230502 19:18:35.922" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="beforeAddingCar.png"&gt;&lt;img src="beforeAddingCar.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230502 19:18:35.791" endtime="20230502 19:18:35.923"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${sor}</var>
+<arg>css:div.row</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20230502 19:18:35.945" level="INFO">${sor} = 8</msg>
+<status status="PASS" starttime="20230502 19:18:35.928" endtime="20230502 19:18:35.946"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Sorok száma add előtt: ${sor}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230502 19:18:35.951" endtime="20230502 19:18:35.952"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath:/html/body/app-root/div/app-autok-lista/div[2]/div[5]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230502 19:18:35.954" level="INFO">Clicking button 'xpath:/html/body/app-root/div/app-autok-lista/div[2]/div[5]/button'.</msg>
+<status status="PASS" starttime="20230502 19:18:35.953" endtime="20230502 19:18:36.039"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>addedCar.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230502 19:18:36.152" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="addedCar.png"&gt;&lt;img src="addedCar.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230502 19:18:36.040" endtime="20230502 19:18:36.152"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${sor}</var>
+<arg>css:div.row</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20230502 19:18:36.162" level="INFO">${sor} = 9</msg>
+<status status="PASS" starttime="20230502 19:18:36.153" endtime="20230502 19:18:36.163"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Sorok száma add után: ${sor}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230502 19:18:36.165" endtime="20230502 19:18:36.167"/>
+</kw>
+<status status="PASS" starttime="20230502 19:18:35.352" endtime="20230502 19:18:36.167"/>
+</test>
+<test id="s1-s1-t3" name="Verify Delete" line="23">
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${sor}</var>
+<arg>css:div.row</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20230502 19:18:36.179" level="INFO">${sor} = 9</msg>
+<status status="PASS" starttime="20230502 19:18:36.170" endtime="20230502 19:18:36.180"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/app-root/div/app-autok-lista/div[${sor}]/div[5]/button[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230502 19:18:36.181" level="INFO">Clicking element 'xpath:/html/body/app-root/div/app-autok-lista/div[9]/div[5]/button[1]'.</msg>
+<status status="PASS" starttime="20230502 19:18:36.181" endtime="20230502 19:18:36.228"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>afterDelete.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230502 19:18:36.335" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="afterDelete.png"&gt;&lt;img src="afterDelete.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230502 19:18:36.229" endtime="20230502 19:18:36.336"/>
+</kw>
+<status status="PASS" starttime="20230502 19:18:36.169" endtime="20230502 19:18:36.337"/>
+</test>
+<status status="PASS" starttime="20230502 19:18:31.080" endtime="20230502 19:18:36.339"/>
+</suite>
+<status status="PASS" starttime="20230502 19:18:31.042" endtime="20230502 19:18:36.343"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Teszt">Teszt</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1" name="CRUD">Teszt.CRUD</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

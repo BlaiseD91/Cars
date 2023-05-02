@@ -23,6 +23,18 @@
       "marka": "Trabant",
       "rendszam": "ASD-123",
       "tipus": "Benzin"
+    },
+    {
+      "id": "5",
+      "marka": "Toyota",
+      "rendszam": "NGK-873",
+      "tipus": "Elektromos"
+    },
+    {
+      "id": "6",
+      "marka": "Opel",
+      "rendszam": "DRQ-734",
+      "tipus": "Benzin"
     }
   ]
 }

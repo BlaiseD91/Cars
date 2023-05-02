@@ -43,6 +43,7 @@ export class AutokListaComponent implements OnInit {
   onCreate(auto:any){
     this.base.onCreate(auto).subscribe(
       () => {
+        this.ujAuto = {}
         this.base.getAll().subscribe(
           (eredmeny) => this.autok=eredmeny)
       }
